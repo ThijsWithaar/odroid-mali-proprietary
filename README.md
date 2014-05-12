@@ -1,17 +1,30 @@
 # odroid-mali-proprietary
 
 Odroid Mali-400 proprietary support libraries.
-Since hardkernel/Odroid tends to package them as part of bigger packages.
-These are the extracted blobs, which can be usefull when building an linux image from scratch
+Hardkernel/Odroid tends to package them as part of bigger packages, which is 
+inconvenient when building an linux image from scratch.
 
-On Debian Jessie, these files should be copied to /usr/lib/arm-linux-gnueabihf
-On most other systems, it should be /usr/lib
+On Debian Jessie, these files should be copied to /usr/lib/arm-linux-gnueabihf.
+On most other systems, it should be /usr/lib.
+
 
 ## R3P2
 
-
-R3P2 is from
+The R3P2 binaries were downloaded from
 http://dn.odroid.com/MALI400_R3P2/20130429-for-xorg-1.13.3/mali_packages.tar.gz
 
-It requires an X11 driver (xf86-video-mali) which can be found at
+These packages include a binary for the xf86-video-mali driver. When using a different
+version of X11, it needs to be rebuild. The sources can be found at:
 http://malideveloper.arm.com/downloads/drivers/DX910/r3p2-01rel4/DX910-SW-99003-r3p2-01rel4.tgz
+
+The xf86-video-mali driver is known to copy the pixel data around quite inefficiently using 
+ump for shared memory.
+
+## R4P0
+
+These are hopefully part of
+http://www.odroid.in/lubuntu-13.10-xbmc/lubuntu-desktop-13.10-armhf-odroidx2_20140408.img.xz
+
+They can be used with the armsoc X11 driver, which uses DMA-buf for shared memory and should
+have higher performance.
+
