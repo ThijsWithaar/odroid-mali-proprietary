@@ -28,3 +28,8 @@ http://www.odroid.in/lubuntu-13.10-xbmc/lubuntu-desktop-13.10-armhf-odroidx2_201
 They can be used with the armsoc X11 driver, which uses DMA-buf for shared memory and should
 have higher performance.
 
+## R5P0
+
+Copied from http://builder.mdrjr.net/tools/u3/4412_r5p0_x11.tar.xz
+These should not require libUMP anymore.
+Untested on Odroid-X2
