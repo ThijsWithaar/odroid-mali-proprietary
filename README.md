@@ -31,5 +31,5 @@ have higher performance.
 ## R5P0
 
 Copied from http://builder.mdrjr.net/tools/u3/4412_r5p0_x11.tar.xz
-These should not require libUMP anymore.
-Untested on Odroid-X2
+These don't require libUMP anymore. A matching kernel for the X2 can be found at
+https://github.com/hardkernel/linux/tree/1130f8761789bfe79de0db2b7f5013ff3eb1f978
